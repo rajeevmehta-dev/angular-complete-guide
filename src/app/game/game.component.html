@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-lg-12">
+    <p>Active Users</p>
+    <p *ngFor="let aItem of this.activeUsers; let i = index;"> 
+      {{aItem}} set- <a  href="javascript:void(0)" (click) = "this.acctService.addToInActive(i)">InActive</a>
+    </p>
+  </div>
+</div>
