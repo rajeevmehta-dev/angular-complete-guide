@@ -1,8 +1,40 @@
 <app-header></app-header>
 <div class="container">
-  <div class="row">
+    <div class="row">
     <div class="col-md-12">
       <router-outlet></router-outlet>
     </div>
   </div>
 </div>
+<!--   <div class="row">
+    <div class="col-md-4">
+    <form (ngSubmit)="this.onSubmit()" [formGroup]="this.myForm">
+      <div class="form-group">
+        <input type="text" formControlName="ProjectName" class="form-control">
+        <span class = "help-block" *ngIf = "this.myForm.get('ProjectName').hasError('required') && 
+        this.myForm.get('ProjectName').touched
+        ">Please Enter Project Name</span>
+        <span class = "help-block" *ngIf = "this.myForm.get('ProjectName').hasError('isValueSame') && 
+        this.myForm.get('ProjectName').touched
+        ">Already Exist</span>
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="Email" class="form-control">
+        <span class = "help-block" *ngIf = "(this.myForm.get('Email').hasError('required') 
+        || this.myForm.get('Email').hasError('email'))
+        && 
+        this.myForm.get('Email').touched
+        ">Please Enter Valid Email</span>
+        <span class = "help-block" *ngIf = "this.myForm.get('Email').hasError('alreadyExists')">Already exists</span>
+      </div>
+      <div class="form-group">
+        <select formControlName="ProjectStatus" class ="form-control">
+          <option [value]="''" disabled hidden readonly>Select</option>
+          <option *ngFor="let statusItem of this.status" [value] = "statusItem">{{statusItem}}</option>
+        </select>
+      </div>
+      <button type = "submit" class ="btn btn-primary" [disabled] = "!this.myForm.valid">Submit</button>
+    </form>
+  </div>
+  </div>
+ -->
